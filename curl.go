@@ -57,6 +57,8 @@ func (Curl) decode(data []byte) PostResponse {
 		}
 	}
 	data = data[k:]
+	data_t := string(data)
+	fmt.Println(data_t)
 	if err := json.Unmarshal(data, &result); err != nil {
 		log.Println(err)
 		return PostResponse{}

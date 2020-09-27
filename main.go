@@ -21,7 +21,6 @@ func get_ajax(w http.ResponseWriter, req *http.Request) {
 		c := Curl{}
 		form := DataForm{}
 		q := req.URL.Query()
-
 		form.Author = q.Get("AU")
 		form.Id = q.Get("ID")
 		form.Location = q.Get("PP")
@@ -61,7 +60,7 @@ func get_one(w http.ResponseWriter, r *http.Request) {
 		var data PostResponseRUSMARC
 		df := DataForm{}
 		q := r.URL.Query()
-		df.Id = q.Get("Id")
+		df.Title = q.Get("TI")
 		data = c.response(df)
 		for _, s := range data.Result[0].UNIMARC {
 			if strings.HasPrefix(s, "852") == true {

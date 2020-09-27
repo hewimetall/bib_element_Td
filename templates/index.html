@@ -1,40 +1,69 @@
-<html lang="en" data-lt-installed="true">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ .StaticDir}}main.css">
-    <title>The HTML5 Herald</title>
-<link href="https://unpkg.com/tabulator-tables@4.8.1/dist/css/tabulator.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colrolib Templates">
+    <meta name="author" content="colorlib.com">
+    <meta name="keywords" content="Colrolib Templates">
 <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.8.1/dist/js/tabulator.min.js">
 </script>
+<link href="{{ .StaticDir}}tabulator_semantic-ui.min.css" rel="stylesheet">
 
+    <!-- Title Page-->
+    <title>Au Form Wizard</title>
 
-  </head>
-  <body>
-    <div id="app-f" style="
-      margin-left: 30%;
-      margin-right: 30%;">
+    <!-- Main CSS-->
+    <link href="{{ .StaticDir}}main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-color-1 p-t-395 p-b-120">
+        <div class="wrapper wrapper--w1070">
+            <div class="card card-7">
+                <div class="card-body">
+                        <div class="input-group input--large">
+                            <label class="label">iddb</label>
+                            <input class="input--style-1" type="text" name="iddb" id="iddb">
+                        </div>
+                        <div class="input-group input--large">
+                            <label class="label">ID</label>
+                            <input class="input--style-1" type="text" name="ID" id="ID">
+                        </div>
+
+                        <div class="input-group input--large">
+                            <label class="label">Издательство</label>
+                            <input class="input--style-1" type="text" name="PU" id="PU">
+                        </div>
+                        <div class="input-group input--large">
+                            <label class="label">Автор</label>
+                            <input class="input--style-1" type="text" name="AU" id="AU">
+                        </div>
+                        <div class="input-group input--large">
+                            <label class="label">Год</label>
+                            <input class="input--style-1" type="text" name="PY" id="PY">
+                        </div>
+                        <div class="input-group input--large">
+                            <label class="label">Заглавие</label>
+                            <input class="input--style-1" type="text" name="TI" id="TI">
+                        </div>
+                        <div class="input-group input--large">
+                            <label class="label">Место</label>
+                            <input class="input--style-1" type="text" name="PP" id="PP">
+                        </div>
+                        <input class="btn-submit" type="submit" 
+                        value="Поиск" 
+                        onclick='getData();'></input>
+                </div>
+            </div>
+        </div>
+        <div id="example-table"></div>
+
     </div>
-    <table>
-      <tr><td>iddb</td><td><input type='text' name='iddb' id='iddb'></td></tr>
-      <tr><td>ID</td><td><input type='text' name='ID' id='ID'></td></tr>
-      <tr><td>Автор</td><td><input type='text' name='AU' id='AU'></td></tr>
-      <tr><td>Заглавие</td><td><input type='text' name='TI' id='TI'></td></tr>
-      <tr><td>Год</td><td><input type='text' name='PY' id='PY'></td></tr>
-      <tr><td>Издательство</td><td><input type='text' name='PU' id='PU'></td></tr>
-      <tr><td>Место</td><td><input type='text' name='PP' id='PP'></td></tr>
-      <tr><td></td><td><input type='button' value=' отправить ' onclick='getData();'></td></tr>
-    </table>
 
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
-
-
-
-<div id="example-table"></div>
-
-<script>
-//initialize table
-
-</script>
     <script src="{{ .StaticDir}}myscripts.js"></script>
-  </body>
 </html>
