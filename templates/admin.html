@@ -1,0 +1,20 @@
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+  <script>
+		$.ajax({
+			type: "POST",
+			url: window.location.href+"/api",
+			data: {{foo:["bar1", "bar2"]} },
+			success: success
+		});
+	
+  </script>
+</head>
+<body>
+  <h1>Hello, {{ .Name }}</h1>
+  <h2>Post and recieve a string using JSON</h2>
+  <p id="response"></p>
+</body>
+</html>

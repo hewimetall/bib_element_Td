@@ -1,0 +1,24 @@
+<html lang="en" data-lt-installed="true">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ .StaticDir}}main.css">
+    <title>The HTML5 Herald</title>
+  </head>
+  <body>
+    <div id="app-f" style="
+      margin-left: 30%;
+      margin-right: 30%;">
+    </div>
+    <table>
+      <tr><td>iddb</td><td><input type='text' name='iddb' id='iddb'></td></tr>
+      <tr><td>ID</td><td><input type='text' name='ID' id='ID'></td></tr>
+      <tr><td>Автор</td><td><input type='text' name='AU' id='AU'></td></tr>
+      <tr><td>Заглавие</td><td><input type='text' name='TI' id='TI'></td></tr>
+      <tr><td>Год</td><td><input type='text' name='PY' id='PY'></td></tr>
+      <tr><td>Издательство</td><td><input type='text' name='PU' id='PU'></td></tr>
+      <tr><td>Место</td><td><input type='text' name='PP' id='PP'></td></tr>
+      <tr><td></td><td><input type='button' value=' отправить ' onclick='post();'></td></tr>
+    </table>
+    <script src="{{ .StaticDir}}myscripts.js"></script>
+  </body>
+</html>
